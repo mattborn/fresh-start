@@ -52,6 +52,7 @@ if ( is_admin() ) :
 		update_option('mailserver_url', '');
 		update_option('mailserver_login', '');
 		update_option('mailserver_pass', '');
+		update_option('default_pingback_flag', 0);
 		update_option('default_ping_status', 'closed');
 		update_option('default_comment_status', 'closed');
 		update_option('require_name_email', 0);
@@ -70,7 +71,7 @@ if ( is_admin() ) :
 		update_option('embed_autourls', 0);
 		update_option('embed_size_w', '');
 		update_option('embed_size_h', 0);
-		update_option('uploads_user_yearmonth_folders', '');
+		update_option('uploads_use_yearmonth_folders', '');
 		_e("<p>Options updated&hellip;</p>");
 		global $current_user;
 		$dashboard_boxes = array(
