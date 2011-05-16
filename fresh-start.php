@@ -48,6 +48,7 @@ if ( is_admin() ) :
 		$wpdb->query("delete from $wpdb->term_taxonomy");
 		$wpdb->query("alter table $wpdb->term_taxonomy auto_increment = 1");
 		_e("<p>Terms removed&hellip;</p>");
+		if ( get_option('blogdescription') == 'Just another WordPress site' ) update_option('blogdescription','');
 		update_option('use_smilies', 0);
 		update_option('mailserver_url', '');
 		update_option('mailserver_login', '');
